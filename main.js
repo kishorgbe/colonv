@@ -1,4 +1,4 @@
-const { app, BrowserWindow, ipcMain, clipboard } = require("electron");
+const { app, BrowserWindow, ipcMain, clipboard, Menu } = require("electron");
 const path = require("path");
 
 // For development
@@ -27,9 +27,23 @@ const createWindow = () => {
   win.loadFile(__dirname + "/public/index.html");
 };
 
-app.whenReady().then(() => {
-  createWindow();
-});
+const dockMenu = Menu.buildFromTemplate([
+  {
+    label: "New Window",
+    click() {
+      createWindow();
+    }
+  }
+]);
+
+app
+  .whenReady()
+  .then(() => {
+    if (process.platform === "darwin") {
+      app.dock.setMenu(dockMenu);
+    }
+  })
+  .then(createWindow);
 
 app.on("window-all-closed", () => {
   if (process.platform !== "darwin") app.quit();

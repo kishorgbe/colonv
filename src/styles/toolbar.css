@@ -20,6 +20,10 @@
     align-items: center;
 }
 
+.right{
+    padding-left: 50px;
+}
+
 ul {
     display: flex;
     flex-direction: row;
@@ -35,7 +39,7 @@ ul {
     display: flex;
     flex-direction: row;
     grid-gap: 8px;
-    margin-right:1.75rem;
+    margin-right:1.5rem;
 }
 
 .ctrl-btns li {
@@ -100,8 +104,8 @@ button:hover{
 }
 
 button svg{
-    height:16px;
-    width:16px;
+    height:15px;
+    width:15px;
 }
 
 button.execute{
