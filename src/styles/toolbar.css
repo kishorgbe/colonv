@@ -1,0 +1,141 @@
+.tool-bar {
+    /* border-bottom: 1px solid #cbcdd1; */
+    -webkit-app-region: drag;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px 20px;
+    height:50px;
+    position: fixed;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+}
+
+.left,
+.right {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+.ctrl-btns {
+    -webkit-app-region: no-drag;
+    -webkit-user-select: none;
+    /* width: 100px; */
+    display: flex;
+    flex-direction: row;
+    grid-gap: 8px;
+    margin-right:1.75rem;
+}
+
+.ctrl-btns li {
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+
+}
+
+.ctrl-btns li.close {
+    background: #FF605C;
+    border: 1px solid #ff453a;
+}
+
+.ctrl-btns li.close:hover {
+    background: #ff453a;
+}
+
+.ctrl-btns li.minimize {
+    background: #FFBD44;
+    border: 1px solid #ff9f0a;
+}
+
+.ctrl-btns li.minimize:hover {
+    background: #ff9f0a;
+}
+
+.ctrl-btns li.maximize {
+    background: #30d158;
+    border: 1px solid #01b948;
+}
+
+.ctrl-btns li.maximize:hover {
+    background: #01b948;
+}
+
+.tool-bar button{
+    border: none;
+    border-radius: 3px;
+    background: transparent;
+    padding: 4px 6px;
+    margin-bottom: 0px;
+    /* padding-bottom: 2px; */
+    
+    display: flex;
+    align-items: center;
+    color: #374957;
+    font-size: 14px;
+}
+
+.tool-bar button span{
+    width: 16px;
+    height: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #374957;
+}
+
+button:hover{
+    background: #f4f5f7;
+}
+
+button svg{
+    height:16px;
+    width:16px;
+}
+
+button.execute{
+   display: flex;
+   align-items: center;
+   grid-gap: 4px;
+}
+
+button:active {
+    background-color: #ccc;
+}
+
+.left .actions, .right .actions{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-gap: 0.75rem;
+}
+
+.toast{
+    position: fixed;
+    bottom: 1rem;
+    left: 0px;
+    right: 0px;
+    z-index:999999;
+    display: flex;
+    justify-content: center;
+}
+
+.toast .toast-msg{
+    background: #dcf8e7;
+    color: #2b8c5a;
+    padding: 0.5rem 4rem;
+    border-radius:4px;
+    border: 1px solid #bde2cf;
+    font-weight: 300;
+}

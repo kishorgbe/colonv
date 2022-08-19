@@ -1,0 +1,33 @@
+{
+  "name": "colonv",
+  "version": "1.0.0",
+  "description": ":V is an application for multiline js editor",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder"
+  },
+  "keywords": [
+    ":V"
+  ],
+  "author": "kishor <kishorgbe@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "monaco-editor": "^0.34.0",
+    "node-cron": "^3.0.2"
+  },
+  "devDependencies": {
+    "electron": "^20.0.2",
+    "electron-builder": "^23.3.3",
+    "electron-reloader": "^1.2.3"
+  },
+  "build": {
+    "appId": "com.colonv.app",
+    "productName": "colonv",
+    "mac": {
+      "target": "dmg",
+      "icon": "./public/icons/logo.png",
+      "category": "public.app-category.developer-tools"
+    }
+  }
+}
